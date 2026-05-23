@@ -91,6 +91,18 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeElements.forEach(element => fadeObserver.observe(element));
 
 
+    // 6. SEARCH SHORTCUT ('S')
+    const searchInput = document.querySelector('.search-bar input');
+    document.addEventListener('keydown', (e) => {
+        if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') return;
+        if (e.key.toLowerCase() === 's') {
+            e.preventDefault(); 
+            if(sidebar.classList.contains('collapsed')) {
+                sidebar.classList.remove('collapsed');
+            }
+            searchInput.focus();
+        }
+    });
 
     // 7. MODAL POPUPS (Projects & Certifications)
     const modal = document.getElementById('popup-modal');
@@ -156,52 +168,45 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-  // 8. TYPING ANIMATION (Infinite Loop)
-    const typedTextSpan = document.getElementById("typed-text");
-    
-    // The phrases you want to loop through
-    const textArray = ["I build digital experiences.", "I explore cybersecurity."];
-    
-    const typingDelay = 70;    // Speed of typing each character
-    const erasingDelay = 40;   // Speed of erasing each character
-    const newTextDelay = 1500; // How long to pause before erasing and starting the next phrase
-    
-    let textArrayIndex = 0;
-    let charIndex = 0;
+ // 8. TYPING ANIMATION (Infinite Loop with static "I")
+const typedTextSpan = document.getElementById("typed-text");
+const textArray = ["build digital experiences.", "explore cybersecurity."];
+const typingDelay = 70;
+const erasingDelay = 40;
+const newTextDelay = 1500;
 
-    function type() {
-        if (!typedTextSpan) return; // Prevent crash if element is missing
+let textArrayIndex = 0;
+let charIndex = 0;
 
-        if (charIndex < textArray[textArrayIndex].length) {
-            typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-            charIndex++;
-            setTimeout(type, typingDelay);
-        } else {
-            // Finished typing the phrase, wait then start erasing
-            setTimeout(erase, newTextDelay);
+function type() {
+    if (!typedTextSpan) return;
+
+    if (charIndex < textArray[textArrayIndex].length) {
+        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingDelay);
+    } else {
+        setTimeout(erase, newTextDelay);
+    }
+}
+
+function erase() {
+    if (!typedTextSpan) return;
+
+    if (charIndex > 0) {
+        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, erasingDelay);
+    } else {
+        textArrayIndex++;
+        if (textArrayIndex >= textArray.length) {
+            textArrayIndex = 0;
         }
+        setTimeout(type, typingDelay + 300);
     }
+}
 
-    function erase() {
-        if (!typedTextSpan) return;
-
-        if (charIndex > 0) {
-            typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
-            charIndex--;
-            setTimeout(erase, erasingDelay);
-        } else {
-            // Finished erasing, move to the next phrase
-            textArrayIndex++;
-            if (textArrayIndex >= textArray.length) {
-                textArrayIndex = 0; // Reset back to the first phrase
-            }
-            setTimeout(type, typingDelay + 300); // Slight pause before typing next
-        }
-    }
-
-    // Start the animation after the initial page load/fade-in
-    if (typedTextSpan) {
-        setTimeout(type, 800);
-    }
-
+if (typedTextSpan) {
+    setTimeout(type, 800);
+}
 });
