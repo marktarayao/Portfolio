@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Daniel B. Tarayap - Product Designer Portfolio</title>
+    <!-- Modern Sans-Serif Font (Inter example) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="dark-theme">
+
+    <div class="dashboard-container">
+        
+        <!-- =========================================
+             SIDEBAR NAVIGATION (Fixed/Sticky)
+             ========================================= -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/images/profile.jpg" alt="Mark Daniel B. Tarayap" class="profile-pic">
+                <div class="profile-info">
+                    <h1>Mark Daniel B. Tarayao</h1>
+                    <p>Computer Science Student</p>
+                </div>
+                <button id="toggle-sidebar" class="icon-btn-small"><i class="fas fa-chevron-left"></i></button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul class="nav-links">
+                    <!-- Text is wrapped in <span> for the collapse animation -->
+                    <li><a href="#hero" class="active"><i class="fas fa-compass"></i> <span>Explore</span></a></li>
+                    <li><a href="#about"><i class="fas fa-user"></i> <span>About Me</span></a></li>
+                    <li><a href="#skills"><i class="fas fa-brain"></i> <span>Skills</span></a></li>
+                    <li><a href="#projects"><i class="fas fa-layer-group"></i> <span>Projects</span></a></li>
+                    <li><a href="#experience"><i class="fas fa-briefcase"></i> <span>Experience</span></a></li>
+                    <li><a href="#certifications"><i class="fas fa-certificate"></i> <span>Certifications</span></a></li>
+                    <li><a href="#resume"><i class="fas fa-file-alt"></i> <span>Resume</span></a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> <span>Contact</span></a></li>
+                </ul>
+
+                <!-- Connect Section -->
+                <div class="sidebar-section">
+                    <h3>CONNECT</h3>
+                    <ul class="connect-links">
+                        <li><a href="mailto:2300483@usl.edu.ph" target="_blank"><i class="fas fa-envelope"></i> <span>Email</span> <i class="fas fa-arrow-right-long external-link"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/mark-daniel-tarayao-a57765394/" target="_blank"><i class="fab fa-linkedin-in"></i> <span>LinkedIn</span> <i class="fas fa-arrow-right-long external-link"></i></a></li>
+                        <li><a href="https://github.com/marktarayao" target="_blank"><i class="fab fa-github"></i> <span>GitHub</span> <i class="fas fa-arrow-right-long external-link"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            
+        </aside>
+
+        <!-- =========================================
+             MAIN CONTENT AREA
+             ========================================= -->
+        <main class="main-content">
+
+            <!-- HERO SECTION -->
+            <section id="hero" class="hero fade-in">
+                <div class="hero-content">
+                    <h1 class="hero-greeting">Hey, I’m Mark Daniel.</h1>
+                    
+                    <!-- Typing Animation Container -->
+                    <!-- Replace your current h2 with this one -->
+                    <h2 class="hero-role">
+                        <span id="typed-text"></span><span class="cursor"></span>
+                    </h2>
+                    
+                    <p class="hero-description">
+                        A Computer Science student passionate about software development, modern web technologies, and cybersecurity. I enjoy creating clean, functional, and user-focused applications while continuously learning about secure systems, ethical hacking, and digital defense.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#about" class="btn btn-primary">About</a>
+                        <a href="mailto:2300483@usl.edu.ph" class="btn btn-secondary"><i class="fas fa-envelope"></i> E-Mail</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ABOUT SECTION -->
+            <section id="about" class="about section-spacing fade-in">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-card glassmorphism">
+                    <div class="about-text">
+                        <p>I am a Bachelor of Science in Computer Science student at the University of Saint Louis Tuguegarao with a strong interest in both software development and cybersecurity.</p>
+                        <p>As an aspiring developer, I enjoy building modern and interactive web experiences using technologies like HTML, CSS, JavaScript, Python, and C#. At the same time, I am actively pursuing knowledge in cybersecurity, particularly in ethical hacking, network security, vulnerability assessment, and secure system practices.</p>
+                        <p>I am passionate about continuous learning and enjoy solving problems through technology. My goal is to become a well-rounded technology professional capable of developing secure, efficient, and impactful digital solutions.</p>
+                        <p>Outside academics, I participate in technology-related trainings and cybersecurity learning experiences to strengthen both my technical and analytical skills.</p>
+                    </div>
+                    <img src="assets/images/profile.jpg" alt="Mark Daniel B. Tarayap" class="about-profile-pic">
+                </div>
+            </section>
+
+            <!-- SKILLS SECTION -->
+            <section id="skills" class="skills section-spacing fade-in">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <div class="skills-grid">
+                    <div class="skill-category glassmorphism">
+                        <h3><i class="fas fa-code"></i> Languages</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>C#</li>
+                            <li>C++</li>
+                            <li>JavaScript</li>
+                            <li>HTML & CSS</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category glassmorphism">
+                        <h3><i class="fas fa-palette"></i> Web Development</h3>
+                        <ul>
+                            <li>Responsive Web Design</li>
+                            <li>Frontend Development</li>
+                            <li>UI/UX Fundamentals</li>
+                            <li>Modern Dashboard Interfaces</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category glassmorphism">
+                        <h3><i class="fas fa-server"></i> Cybersecurity</h3>
+                        <ul>
+                            <li>Cybersecurity Fundamentals</li>
+                            <li>Ethical Hacking Basics</li>
+                            <li>Vulnerability Awareness</li>
+                            <li>Security Best Practices</li>
+                            <li>Incident Response Awareness</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category glassmorphism">
+                        <h3><i class="fas fa-tools"></i> Tools & Tech</h3>
+                        <ul>
+                            <li>Git & GitHub</li>
+                            <li>Wireshark</li>
+                            <li>Nmap</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROJECTS SECTION -->
+            <section id="projects" class="projects section-spacing fade-in">
+                <h2 class="section-title">New Drops</h2>
+                <div class="project-grid">
+                    
+                    <div class="project-card glassmorphism-card open-modal" data-img="assets/images/project1.png" data-link="https://alfrescopizzeriaandbistro.vercel.app/">
+                        <div class="project-image-container">
+                            <img src="assets/images/project1.png" alt="Billify Project" class="project-image">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3 class="project-name">Alfresco Pizzeria and Bistro Website</h3>
+                                <p class="project-description">Static Website for viewing the menu.</p>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-tech">HTML / CSS / JavaScript</span>
+                                <p class="project-price"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Password Analyzer: Removed data-link, added data-github and data-deployed="false" -->
+                    <div class="project-card glassmorphism-card open-modal" data-img="assets/images/project2.png" data-github="https://github.com/marktarayao/password-analyzer" data-deployed="false">
+                        <div class="project-image-container">
+                            <img src="assets/images/project2.png" alt="Supply Project" class="project-image">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3 class="project-name">Password Analyzer</h3>
+                                <p class="project-description">Analyzes password strength and security.</p>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-tech">HTML / JS / CSS / Python / Flask</span>
+                                <p class="project-price"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- EXPERIENCE SECTION (Redesigned) -->
+            <section id="experience" class="experience section-spacing fade-in">
+                <h2 class="section-title">Experience</h2>
+                
+                <div class="experience-list">
+                    <div class="experience-item">
+                        <h3 class="exp-role">Computer Science Student</h3>
+                        <p class="exp-company">University of Saint Louis Tuguegarao</p>
+                        <span class="exp-date">2023 – Present</span>
+                        <ul class="exp-details">
+                            <li>Developing foundational skills in software engineering and cybersecurity</li>
+                            <li>Building academic and personal technology projects</li>
+                            <li>Exploring secure development practices and network fundamentals</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3 class="exp-role">Cybersecurity Capture The Flag (CTF) Participant</h3>
+                        <p class="exp-company">Hack The North PH</p>
+                        <span class="exp-date">November 2025</span>
+                        <ul class="exp-details">
+                            <li>Completed beginner-level Capture The Flag challenges</li>
+                            <li>Strengthened analytical and problem-solving skills</li>
+                            <li>Applied cybersecurity concepts through hands-on exercises</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CERTIFICATIONS SECTION -->
+            <section id="certifications" class="certifications section-spacing fade-in">
+                <h2 class="section-title">Certifications</h2>
+                <div class="certifications-grid">
+                    
+                    <div class="cert-card glassmorphism">
+                        <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                        <div class="cert-details">
+                            <h3>TCON 8 – National Cybersecurity Conference</h3>
+                            <p>Hack The North PH</p>
+                            <span class="cert-date">November 2025</span>
+                            <!-- Removed data-link attribute here -->
+                            <a href="#" class="verify-btn open-modal" data-img="assets/images/cert1.jpg">Verify <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="cert-card glassmorphism">
+                        <div class="cert-icon"><i class="fas fa-laptop-code"></i></div>
+                        <div class="cert-details">
+                            <h3>Intro to Cybersecurity</h3>
+                            <p>Cisco Networking Academy</p>
+                            <span class="cert-date">Completed February 2026</span>
+                            <a href="#" class="verify-btn open-modal" data-img="assets/images/cert2.png" data-link="https://www.credly.com/badges/09346327-b277-43f5-af08-11238c841c48/public_url">Verify <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RESUME SECTION -->
+            <section id="resume" class="resume section-spacing fade-in">
+                <h2 class="section-title">Resume</h2>
+                <div class="resume-card glassmorphism">
+                    <i class="fas fa-file-pdf resume-icon"></i>
+                    <div class="resume-text">
+                        <h3>View My Professional Resume</h3>
+                        <p>Curious about my career history and specific skills? Download my full CV here.</p>
+                    </div>
+                    <a href="assets/resume.pdf" download class="btn btn-primary"><i class="fas fa-download"></i> Download Resume</a>
+                </div>
+            </section>
+
+            <!-- CONTACT SECTION -->
+            <section id="contact" class="contact section-spacing fade-in">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-card glassmorphism">
+                    <p class="contact-message">
+                        I am currently open for new opportunities. Whether you have a question, a project in mind, or just want to connect, feel free to reach out through any of the platforms below!
+                    </p>
+                    <ul class="contact-social-links large-links">
+                        <li>
+                            <a href="tel:+63 969 154 2945"> <!-- Replace X with your number -->
+                                <i class="fas fa-phone"></i> +63 969 154 2945
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="mailto:2300483@usl.edu.ph" target="_blank">
+                                <i class="fas fa-envelope"></i> 2300483@usl.edu.ph
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/mark-daniel-tarayao-a57765394/" target="_blank">
+                                <i class="fab fa-linkedin"></i> LinkedIn Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/marktarayao" target="_blank">
+                                <i class="fab fa-github"></i> GitHub Profile
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="footer fade-in">
+                <p>&copy; 2026 Mark Daniel B. Tarayap. All rights reserved.</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- GLOBAL POPUP MODAL -->
+    <div id="popup-modal" class="modal">
+        <div class="modal-content glassmorphism">
+            <span class="close-btn">&times;</span>
+            <img id="modal-image" src="" alt="Preview Image" style="display: none;">
+            
+            <div class="modal-actions" style="display: flex; gap: 15px; justify-content: center; margin-top: 15px;">
+                <a id="modal-link" href="#" target="_blank" class="btn btn-primary" style="display: none;">Visit Website <i class="fas fa-arrow-right"></i></a>
+                <a id="modal-github" href="#" target="_blank" class="btn btn-secondary" style="display: none;"><i class="fab fa-github"></i> Source Code</a>
+            </div>
+            <p id="modal-info" style="display: none; color: var(--text-muted); font-size: 14px; margin-top: 5px;">Not yet deployed</p>
+        </div>
+    </div>
+
+    <!-- Script File -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
